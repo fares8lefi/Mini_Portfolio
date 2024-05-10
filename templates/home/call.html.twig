@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title  %}{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row">
+
+			<div class=" col "></div>
+			<div class=" col ">
+				<p class=" mt-24">
+					Votre satisfaction et votre expérience sont notre priorité absolue. Si vous avez des questions, des préoccupations ou simplement envie de discuter, n'hésitez pas à nous contacter.</p>
+
+
+				{{ form_start(form) }}
+
+				{{ form_widget(form) }}
+
+				<div class=" mt-4 mb-24">
+					<button type="submit">
+						<a class=" px-6 py-1 text-white rounded-full bg-orange-400 hover:bg-slate-400">
+
+
+							envoyer
+						</a>
+					</button>
+				</div>
+
+
+				{{ form_end(form) }}
+			</div>
+
+
+			<div class="col"></div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block title %}{% endblock %}
+{% block body %}
+	<div class="container mt-40 mb-40">
+		<div class="row">
+			<div class="col-4"></div>
+			<div class="col-4">
+				<p class="mb-4">
+					Bienvenue dans notre espace de partage ! 🌟
+										
+										Nous sommes ravis de vous accueillir ici et nous espérons que votre visite a été aussi enrichissante que plaisante. Votre opinion compte énormément pour nous ! Que vous ayez aimé votre expérience, que vous ayez des suggestions pour nous améliorer ou même simplement envie de partager vos impressions, n'hésitez pas à laisser un commentaire.
+										
+										
+										Avec gratitude,
+										Lefi Fares
+				</p>
+				{{ form_start(form) }}
+				{{ form_widget(form) }}
+				<div class=" mt-4">
+					<button type="submit">
+						<a class=" px-6 py-1 text-white rounded-full bg-orange-400 hover:bg-slate-400">
+
+
+							Commenter
+						</a>
+					</button>
+				</div>
+
+				{{ form_end(form) }}
+			</div>
+			<div class="col-4"></div>
+		</div>
+	</div>
+
+{% endblock %}

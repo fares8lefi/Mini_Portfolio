@@ -1,0 +1,147 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Document
+{% endblock %}
+
+{% block body %}
+	<nav id="home" class="container mx-auto p-6">
+		<div class="flex items-center justify-between">
+			<div>
+				<img src={{ asset ('images/logo.png')}} width="80">
+			</div>
+			<div class="hidden md:flex space-x-6">
+				<a href="{{ path('home') }}" class="text-slate-500 hover:text-orange-400">home</a>
+				<a href="{{ path('about') }}" class="text-slate-500 hover:text-orange-400">About</a>
+				<a href="{{ path('services') }}" class="text-slate-500 hover:text-orange-400">Services</a>
+				<a href="{{ path('new_message') }}" class="px-6 py-1 text-white rounded-full bg-orange-400 hover:bg-slate-400">Call Me</a>
+
+
+			</div>
+		</div>
+	</nav>
+	<section id="About">
+		<div class="container mx-auto px-6 space-x-6 flex flex-col-reverse py-6 text-center md:text-left md:flex-row">
+			<div class="md:w-1/2 flex flex-col space-y-6 justify-center mx-48">
+				<h1 class="font-bold text-3xl md:text-5xl">je me présente</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu</p>
+
+				<a href="{{ path('new_message') }}" class="px-6 py-1 text-white rounded-full self-start bg-orange-400 hover:bg-slate-400">Call Me</a>
+
+			</div>
+			<div class="rounded-3xl md:w-1/2 drop-shadow shadow-black-xl">
+				<img src={{asset ('images/fares.jpg')}} width="450">
+			</div>
+		</div>
+	</section>
+	<div class="container px-10 mx-auto">
+		<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+	</div>
+	<section id="services" class="container px-6">
+		<div class="container px-5 mx-auto my-32 text-center">
+			<h2 class="font-bold text-4xl">a propos de nos services</h2>
+			<p class="mt-8 max-w-5xl mx-auto">e propose une gamme de services incluant le design UI/UX et le développement mobile et web, avec plus de deux ans d'expérience pour vous offrir une découverte enrichissante</p>
+		</div>
+		<div class="mt-10 flex flex-col space-x-2 space-y-5 md:flex-row md:space-x-5 md:space-y-0">
+			<div class="md:w-1/3 items-center flex flex-col p-6 space-y-2 rounded-lg border border-slate-400 bg-red hover:bg-slate-300">
+				<img src={{asset ('images/ux.jpg')}} width="120" alt="ux/ui" class="w-16 rounded-full -mt-14">
+
+				<h5 class="text-lg font-bold">UX/UI</h5>
+				<p class="leading-loose text-sm">UX (Expérience Utilisateur) concerne l'expérience globale; UI (Interface Utilisateur) est la conception visuelle et l'interaction spécifique</p>
+			</div>
+			<div class="md:w-1/3 items-center flex flex-col p-6 space-y-2 rounded-lg border border-slate-400 bg-red hover:bg-slate-300">
+				<img src={{asset ('images/ui.jpg')}} width="120" alt="ux/ui" class="w-16 rounded-full -mt-14">
+
+				<h5 class="text-lg font-bold">Mobile</h5>
+				<p class="leading-loose text-sm">Création d'applications pour smartphones/tablettes (iOS, Android) en utilisant programmation spécifique et design adapté aux appareils mobiles</p>
+			</div>
+			<div class="md:w-1/3 items-center flex flex-col p-6 space-y-2 rounded-lg border border-slate-400 bg-red hover:bg-slate-300">
+				<img src={{asset ('images/web.jpg')}} width="120" alt="ux/ui" class="w-16 rounded-full -mt-14">
+
+				<h5 class="text-lg font-bold">Web</h5>
+				<p class="leading-loose text-sm">création et maintenance de sites internet via langages (HTML, CSS, JavaScript) pour une expérience utilisateur en ligne.</p>
+			</div>
+		</div>
+		<div class="container px-10 mx-auto">
+			<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+		</div>
+
+		<div class="container my-6">
+			<div class="row my-6">
+
+				<div class="col my-6"></div>
+
+				<div class="col my-6 ">
+
+					<h2 class="text-lg font-bold mx-24 ">
+						Laissez-nous un commentaire</h2>
+
+
+					<div class="">
+
+						<p>
+							Nous sommes impatients de lire vos précieux commentaires</p>
+
+
+					</div>
+					<a href="{{ path('new_Comment') }}">
+
+						<button class="btn mt-2 mx-36 px-6 py-1 text-white  rounded-full bg-emerald-400 hover:bg-slate-400">Commentaire
+						</button>
+					</a>
+					<a href="{{ path('CommentAffichage') }}">
+
+
+						<p class=" mx-24 mt-3 hover:text-red-400 hover:text-lg">Consulter la liste des commentaires</p>
+
+
+					</a>
+				</div>
+				<div class="col my-6"></div>
+
+
+			</div>
+
+		</div>
+
+
+		<div class="container px-10 mx-auto">
+			<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+		</div>
+
+		<div class="container my-6">
+			<div class="row my-6">
+
+				<div class="col my-6"></div>
+
+				<div class="col my-6 ">
+
+					<h2 class="text-lg font-bold mx-24 ">
+
+						Inscrivez-vous aux newsletters</h2>
+					<div class="mt-2 ">
+						<p>
+							Recevez toutes les nouveautés concernant nos nouveaux projets</p>
+
+					</div>
+
+
+					<a href="{{ path('new_letter') }}">
+
+
+						<button class="btn mt-2 mx-40 px-6 py-1 text-white rounded-full bg-emerald-400 hover:bg-slate-400">Inscrire</button>
+
+					</a>
+
+
+				</div>
+				<div class="col my-6"></div>
+
+
+			</div>
+
+		</div>
+
+	</section>
+
+{% endblock %}

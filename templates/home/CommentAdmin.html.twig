@@ -1,0 +1,57 @@
+{% extends 'relation.html.twig' %}
+{% block title %}{% endblock %}
+{% block body %}
+	<div class="container mb-52">
+
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col">
+
+				{% if messages %}
+
+
+					<h2 class="my-12 mt-24 text-sm font-medium">
+
+						Les commentaires de nos anciens visiteurs</h2>
+
+					{% for message in messages%}
+
+
+						<p class="text-sm">Visiteur Name</p>
+
+
+						<p class=" mt-2">
+							{{message.user}}
+
+
+						</p>
+
+
+						<p class="text-sm">Commentaire</p>
+
+						<p class=" mt-2">{{message.com}}</p>
+
+						<p class="mt-4">
+
+							<a class=" mx-9 my-12 px-6 py-1 text-white rounded-full bg-red-700 hover:bg-slate-400">Supprimer</a>
+
+						</p>
+
+						<div class="container px-10 mx-auto">
+							<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+						</div>
+
+
+					{% endfor %}
+				{% else %}
+					<p>aucun email trovué</p>
+				{% endif %}
+
+
+			</div>
+			<div class="col-3 "></div>
+		</div>
+	</div>
+
+
+{% endblock %}

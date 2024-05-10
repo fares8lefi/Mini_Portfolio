@@ -1,0 +1,45 @@
+{% extends 'relation.html.twig' %}
+{% block title%}
+	liste des messages
+{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col">
+				{% if messages %}
+
+
+					{% for message in messages%}
+						<p>
+							{{message.nom}}
+
+							{{message.prenom}}
+							{{message.telephone}}
+						</p>
+						<p class="mx-b mt-2">
+							Email :{{message.email}}</p>
+
+
+						<p class="mb-4 mt-2">
+							Message:
+							{{message.message}}</p>
+
+
+						<a href="" class=" mx-4 my-4 px-6 py-1 text-white rounded-full bg-orange-400 hover:bg-slate-400">Répondre</a>
+
+
+						<a class="mx-4 my-4 px-6 py-1 text-white rounded-full bg-red-700 hover:bg-slate-400">
+						Supprimer
+						</a>
+					</p>
+
+				{% endfor %}
+			{% else %}
+				<p>aucun message</p>
+			{% endif %}
+
+		</div>
+		<div class="col-3"></div>
+	</div>
+</div>{% endblock %}

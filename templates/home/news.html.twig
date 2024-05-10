@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col"></div>
+			<div class="col mt-60 mb-40">
+				{{ form_start(form) }}
+				<p class=" text-sm font-medium mb-6">
+					Merci d'envoyer votre email pour recevoir toutes les nouveautés.</p>
+
+				{{ form_widget(form) }}
+
+
+				<button type="submit" class="btn bg-green-400  rounded-full  text-white">
+					envoyer</button>
+				{{ form_end(form) }}
+
+			</div>
+			<div class="col"></div>
+		</div>
+	</div>
+
+
+{% endblock %}
